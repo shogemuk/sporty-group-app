@@ -34,7 +34,7 @@
 				v-if="selectedBadge"
 				:badgeList="selectedBadge"
 				:league-name="selectedLeagueName"
-				:sport-name="selectedSport"
+				:sport-name="activeSport"
 				@close="closeBadgeModal"
 			/>
 		</main>
@@ -60,6 +60,7 @@ export default {
 		const leagues = ref([]);
 		const searchQuery = ref("");
 		const selectedSport = ref("");
+		const activeSport = ref("");
 		const error = ref("");
 		const selectedBadge = ref(null);
 		const selectedLeagueName = ref("");
@@ -155,13 +156,13 @@ export default {
 				(item) => item.strBadge !== null
 			);
 			selectedLeagueName.value = league.strLeague;
-			selectedSport.value = league.strSport;
+			activeSport.value = league.strSport;
 		};
 
 		const closeBadgeModal = () => {
 			selectedBadge.value = null;
 			selectedLeagueName.value = "";
-			selectedSport.value = "";
+			activeSport.value = "";
 		};
 
 		onMounted(() => {
@@ -172,6 +173,7 @@ export default {
 			leagues,
 			searchQuery,
 			selectedSport,
+			activeSport,
 			error,
 			selectedBadge,
 			selectedLeagueName,
