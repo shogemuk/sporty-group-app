@@ -1,0 +1,218 @@
+:root {
+	--sporty-text-primary: #000000;
+	--sporty-text-secondary: #4c4c4c;
+	--sporty-text-minimal: #979da4;
+	--sporty-text-disabled: #d8d8d8;
+	--sporty-text-invert: #ffffff;
+	--sporty-text-brand: #ff5c05;
+
+	--sporty-surface-primary: #1c2630;
+	--sporty-surface-secondary: #f5efe3;
+	--sporty-surface-invert: var(--sporty-text-primary);
+	--sporty-surface-brand: #fbf4fb;
+
+	--sporty-border-primary: #4c6d92;
+	--sporty-border-secondary: rgba(0, 0, 0, 0.3);
+	--sporty-border-minimal: rgba(0, 0, 0, 0.15);
+	--sporty-border-invert: var(--sporty-text-invert);
+	--sporty-border-radius: 0.5rem;
+
+	--sporty-soccer: #03a6a1;
+	--sporty-ice-hockey: #ef8354;
+	--sporty-motorsport: #ee4b6a;
+	--sporty-basketball: #565264;
+	--sporty-american-football: #2191fb;
+
+	--sporty-components-disabled: rgba(0, 0, 0, 0.1);
+
+	--sporty-button-default: var(--sporty-text-primary);
+	--sporty-button-pressed: rgba(0, 0, 0, 0.6);
+	--sporty-button-focus-outline: rgba(0, 136, 255, 0.4);
+	--sporty-button-hover: rgba(0, 0, 0, 0.8);
+	--sporty-desktop-mq: 992px;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+*:focus,
+*:focus-visible,
+*:focus-within {
+	outline-color: var(--sporty-button-focus-outline);
+}
+body {
+	color: var(--sporty-text-primary);
+	background-color: var(--sporty-surface-primary);
+	font-family: "Poppins", serif;
+	transition: color 0.5s, background-color 0.5s;
+	line-height: 24px;
+	font-size: 16px;
+	letter-spacing: 0;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+main {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+header {
+	width: 100%;
+}
+
+.container {
+	max-width: 1280px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	padding: 0.5rem 0;
+}
+.highlight {
+	color: var(--sporty-text-brand);
+}
+
+.sporty-border {
+	border-radius: 1rem;
+	border-bottom-left-radius: 0;
+}
+
+header p {
+	margin-bottom: 1rem;
+}
+header h1 > span {
+	display: flex;
+}
+
+header h1 > span:first-of-type {
+	color: var(--sporty-text-invert);
+}
+
+header h1 > span:last-of-type {
+	color: var(--sporty-text-minimal);
+}
+
+@media (min-width: 1023px) {
+	main {
+		padding: 20px;
+	}
+}
+
+@media (min-width: 1440px) {
+	main {
+		padding: 20px 0;
+	}
+}
+
+h1,
+.h1 {
+	font-weight: 700;
+	font-style: normal;
+	font-size: 32px;
+	line-height: 38px;
+	letter-spacing: 0px;
+	margin-bottom: 0.5rem;
+}
+
+h2,
+.h2 {
+	font-weight: 700;
+	font-style: normal;
+	font-size: 26px;
+	line-height: 32px;
+	letter-spacing: 0px;
+}
+
+h3,
+.h3 {
+	font-weight: 700;
+	font-style: normal;
+	font-size: 22px;
+	line-height: 28px;
+	letter-spacing: 0px;
+	text-decoration: none;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: var(--sporty-text-primary);
+}
+
+a:hover {
+	color: var(--sporty-text-secondary);
+}
+
+input {
+	/* background-color: var(--sporty-surface-primary); */
+	background-color: transparent;
+	height: 53px;
+	min-height: 53px;
+	color: var(--sporty-text-invert);
+	background-image: url("/assets/img/icon-search.svg");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 24px 24px;
+	padding: 0.75rem 1rem;
+	border: 2px solid var(--sporty-border-primary);
+	border-radius: var(--sporty-border-radius);
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	min-width: 200px;
+}
+
+input::placeholder {
+	color: var(--sporty-text-invert);
+}
+
+input:focus {
+	outline: none;
+	/* border-color: #3b82f6; */
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+select {
+	appearance: none;
+	/* background-color: var(--sporty-surface-primary); */
+	background-color: transparent;
+	height: 53px;
+	min-height: 53px;
+	color: var(--sporty-text-invert);
+	background-image: url("/assets/img/icon-chevron.svg");
+	background-repeat: no-repeat;
+	background-position: right 0.75rem center;
+	background-size: 24px 24px;
+	padding: 0.75rem 1rem;
+	border: 2px solid var(--sporty-border-primary);
+	border-radius: var(--sporty-border-radius);
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	min-width: 200px;
+	/* width: 100%; */
+}
+
+select:focus {
+	outline: none;
+	/* border-color: #3b82f6; */
+	box-shadow: 0 0 20px 5px rgba(76, 109, 146, 0.2);
+	transition: all 0.3s ease;
+}
+
+select:disabled {
+	border: 2px solid var(--sporty-border-minimal);
+	background-color: var(--sporty-components-disabled);
+	color: var(--sporty-text-disabled);
+	background-image: url("/assets/img/icon-chevron-disabled.svg");
+}
