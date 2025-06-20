@@ -2,9 +2,9 @@
 
 ## Tech Stack
 
-Vue 3 with Composition API
-Vite for build tooling
-Vanilla CSS for styling
+-   Vue 3 with Composition API
+-   Vite for build tooling
+-   Vanilla CSS for styling
 
 ## Setup and Installation
 
@@ -24,9 +24,9 @@ Open your browser to http://localhost:5173
 
 ## AI Tools Used
 
-Claude: Component architecture design
+Claude: Component architecture design\
 Purpose: The AI helped with:
 
-Vue.js component structure and best practices
-Modal implementation and accessibility
-Bug fixes also assisted with Claude suggestions
+-   Vue.js component structure and best practices
+-   Modal implementation and accessibility
+-   Bug fixes also assisted with Claude suggestions
